@@ -16,34 +16,24 @@ public class Meta : MonoBehaviour
             yaGano = true;
             Debug.Log("¡Has escapado!");
 
-            // 1. Disparar partículas
+            //Aqui se sacan las particulas
             if (confetiFX != null)
             {
                 confetiFX.Play();
             }
 
-            // 2. Activar pantalla de victoria
+            //Se activa la pantalla de ganaste
             if (panelGanaste != null)
             {
                 panelGanaste.SetActive(true);
             }
 
-            // 3. Pausar el juego
+            //Pausar el juego
             if (detenerJuego)
             {
                 Time.timeScale = 0f;
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
             }
 
-            // Desactivar el collider para no volver a entrar
-            GetComponent<Collider>().enabled = false;
         }
-    }
-
-    public void ReiniciarNivel()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
