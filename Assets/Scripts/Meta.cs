@@ -1,3 +1,6 @@
+/// <summary>
+/// Este codgio se encarga de gestionar cuando el jugador llega a la meta 
+/// </summary>
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +12,11 @@ public class Meta : MonoBehaviour
 
     private bool yaGano = false;
 
+    /// <summary>
+    /// En esta funcion verificamos que algun personaje con el tag "player" haya
+    /// entrado en contacto con el objeto que tiene este codigo y muestra el texto y
+    /// saca particulas de confeti
+    /// </summary>  
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !yaGano)
