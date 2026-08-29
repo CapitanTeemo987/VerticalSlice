@@ -14,7 +14,7 @@ public class Meta : MonoBehaviour
         if (other.CompareTag("Player") && !yaGano)
         {
             yaGano = true;
-            Debug.Log("¡Has escapado!");
+            Debug.Log("Has escapado");
 
             //Aqui se sacan las particulas
             if (confetiFX != null)

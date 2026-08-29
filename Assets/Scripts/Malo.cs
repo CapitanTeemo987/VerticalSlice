@@ -4,6 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class Malo : MonoBehaviour
 {
+    public GameObject panelPerdiste;
+    public bool detenerJuego = true;
+    public bool atrapado = false;
+
     private Transform jugador;
     private NavMeshAgent agente;
 
@@ -22,15 +26,29 @@ public class Malo : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            MostrarDerrota();
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    private void MostrarDerrota()
     {
-        if (other.CompareTag("Player"))
+        atrapado = true;
+        Debug.Log("Te atraparon");
+
+        if (panelPerdiste != null)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            panelPerdiste.SetActive(true);
+        }
+
+        if (detenerJuego)
+        {
+            Time.timeScale = 0f;
         }
     }
-}
+
+    public void ReiniciarNivel()
+    {
+        Time.timeScale = 1f; 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+}   
