@@ -7,7 +7,6 @@ public class FollowPlayer : MonoBehaviour
 
     void Start()
     {
-        // Calcula automáticamente la distancia relativa inicial entre la cámara y el jugador
         if (player != null)
         {
             offset = transform.position - player.transform.position;
