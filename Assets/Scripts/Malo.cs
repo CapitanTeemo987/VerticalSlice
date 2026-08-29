@@ -4,27 +4,27 @@ using UnityEngine.SceneManagement;
 public class Malo : MonoBehaviour
 {
     public float velocidad = 12f;
-
     private Transform jugador;
+    private Rigidbody rb;
 
     void Start()
     {
         jugador = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponent<Rigidbody>();    
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Vector3 direccion = jugador.position - transform.position;
-
         direccion.y = 0f;
-
         direccion = direccion.normalized;
 
-        transform.position += direccion * velocidad * Time.deltaTime;
+        //Para el problema que el malo atravesaba las paredes
+        rb.linearVelocity = direccion * velocidad;
     }
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
