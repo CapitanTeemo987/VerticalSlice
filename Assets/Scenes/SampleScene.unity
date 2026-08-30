@@ -8113,7 +8113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1700622571692543174, guid: 82429eb530b41294ca4691b724d0a1a1, type: 3}
       propertyPath: m_Size.z
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5062487062598369293, guid: 82429eb530b41294ca4691b724d0a1a1, type: 3}
       propertyPath: m_Name
@@ -8260,6 +8260,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3217039328994711700, guid: 5ddf50212421e8a4b82ea19b9032de1c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3395723593885385110, guid: 5ddf50212421e8a4b82ea19b9032de1c, type: 3}
       propertyPath: velocidad
       value: 10
@@ -8307,6 +8311,10 @@ PrefabInstance:
     - target: {fileID: 5436253938930256143, guid: 5ddf50212421e8a4b82ea19b9032de1c, type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 5436253938930256143, guid: 5ddf50212421e8a4b82ea19b9032de1c, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5436253938930256143, guid: 5ddf50212421e8a4b82ea19b9032de1c, type: 3}
       propertyPath: m_CollisionDetection
