@@ -6,7 +6,7 @@ La carrera de Teemo es un juego de laberinto desarrollado en Unity para PC, cont
 Para poder escapar, el camino directo a la meta está bloqueado por una puerta cerrada. El jugador debe explorar el entorno, localizar y recoger una llave, lo que actualiza instantáneamente el HUD en pantalla y desactiva la puerta para habilitar el paso hacia la salida. Si el zombi logra colisionar con Teemo, la partida se termina de inmediato congelando el tiempo de la escena y mostrando el panel de derrota con el botón de reintento. Pero sii Teemo llega a la meta, se detiene la partida, se disparan partículas de confeti y se activa la pantalla de victoria con la opción de volver a jugar.
 
 ### Importante
-El HUD depende de donde tengas posicionado la ventana de Game, porfavor pon Game en otra pestaña aparte de Scene
+El HUD depende de donde tengas posicionado la ventana de Game, porfavor pon Game en otra pestaña aparte de Scene.
 
 ### Recursos Reutilizados y Uso de IA
 * **Código base:** En el código de MovimientoJugador reutilice la parte de Update, donde se hace las animaciones y las actualiza, lee la entrada del jugador.
